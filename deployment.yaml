@@ -18,5 +18,12 @@ spec:
         - name: backend
           image: kush233/draw-backend:e118cc2c32b84c2e81d6757a7a3f79e27d66eebe
           imagePullPolicy: Always
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "250m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
           ports:
             - containerPort: 3002
