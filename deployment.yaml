@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: backend
+  namespace: doodlemesh
   labels:
     app: backend
 spec:
@@ -23,6 +24,8 @@ spec:
         - name: backend
           image: kush233/draw-backend:e118cc2c32b84c2e81d6757a7a3f79e27d66eebe
           imagePullPolicy: Always
+          ports:
+            - containerPort: 3002
           resources:
             requests:
               cpu: "100m"
@@ -30,5 +33,3 @@ spec:
             limits:
               cpu: "300m"
               memory: "512Mi"
-          ports:
-            - containerPort: 3002
