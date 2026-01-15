@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: kush233/draw-backend:e118cc2c32b84c2e81d6757a7a3f79e27d66eebe
+          image: kush233/draw-backend:8e0f861be3307ce9c55a362d8e1c38f0b9ab7c0a
           imagePullPolicy: Always
           ports:
             - containerPort: 3002
